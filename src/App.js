@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { Button } from './components/button';
+import { IoIosAdd } from 'react-icons/io'
+import { FiEdit2 } from 'react-icons/fi'
+
 
 function App() {
+  const addData = () => {
+    console.log('add is clicked');
+  }
+  const updateData = () => {
+    console.log('update is clicked');
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button title={'Add'} icon={<IoIosAdd />} handleClick={addData} />
+      <Button title={'update'} icon={< FiEdit2 />} handleClick={updateData} />
+
     </div>
   );
 }
